@@ -1,0 +1,84 @@
+@keyframes up {
+  to {
+    transform: none;
+  }
+}
+@keyframes fi {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes float {
+  50% {
+    transform: rotateY(-11deg) rotateX(4deg) rotateZ(0.5deg) translateY(-8px);
+  }
+}
+@keyframes float2 {
+  50% {
+    transform: rotateY(-12deg) rotateZ(4deg) translateY(-10px);
+  }
+}
+@keyframes pop {
+  40% {
+    transform: scale(1.25) rotate(-6deg);
+  }
+}
+
+.hl > span {
+  display: block;
+  transform: translateY(105%);
+  animation: up 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+.hl:nth-child(2) > span {
+  animation-delay: 0.12s;
+}
+.hl:nth-child(3) > span {
+  animation-delay: 0.24s;
+}
+.fade {
+  opacity: 0;
+  animation: fi 0.9s 0.45s ease forwards;
+}
+.laptop {
+  animation: float 9s ease-in-out infinite;
+}
+.phone {
+  animation: float2 8s ease-in-out infinite;
+}
+.rv {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+.bc:hover .ring .ic {
+  animation: pop 0.5s;
+}
+.tc blockquote {
+  animation: fi 0.5s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hl > span {
+    transform: none;
+  }
+  .fade,
+  .rv {
+    opacity: 1;
+    transform: none;
+  }
+}
