@@ -64,6 +64,13 @@ footer.site{border-top:1px solid var(--bd);padding:2.5rem 0;background:var(--bg2
 #porque .card{background:var(--bg2);border-color:var(--bg2);color:var(--tx)}
 #porque .card:hover{border-color:var(--brand);transform:translateY(-3px);box-shadow:0 10px 24px -14px var(--bg)}
 #porque .card h3{font-size:1.1rem;margin-bottom:.4rem}
+
+/* Destaque animado (HighlightedText) — marcador escuro que "varre" o texto; texto vira laranja */
+.hl{--o:right;--d:0s;position:relative;display:inline-block;white-space:nowrap;padding-inline:.16em;margin-inline:-.08em .08em;z-index:0;transition:color .5s ease var(--d)}
+.hl[data-from="left"]{--o:left}
+.hl::before{content:"";position:absolute;inset:.06em 0 .02em;background:var(--bg);border-radius:.2em;z-index:-1;transform:scaleX(0);transform-origin:var(--o);transition:transform .7s cubic-bezier(.22,1,.36,1) var(--d)}
+.hl.in{color:var(--or)}.hl.in::before{transform:scaleX(1)}
+@media(prefers-reduced-motion:reduce){.hl{color:var(--or)}.hl::before{transform:scaleX(1)}}
 @media(max-width:900px){#whyList{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){#porque .card{padding:1.1rem}}
 @media(max-width:360px){#whyList{grid-template-columns:1fr}}

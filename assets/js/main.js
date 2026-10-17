@@ -35,4 +35,11 @@
     const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); ro.unobserve(e.target); } }), { threshold: .12 });
     $$(".reveal").forEach(e => ro.observe(e));
   } else $$(".reveal").forEach(e => e.classList.add("in"));
+
+  // Destaque animado do título: dispara uma única vez ao entrar na tela
+  const hls = $$("[data-hl]");
+  if ("IntersectionObserver" in window && hls.length) {
+    const ho = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { $$("[data-hl]", e.target).forEach(h => h.classList.add("in")); ho.unobserve(e.target); } }), { threshold: .6 });
+    ho.observe($("#porqueTitle"));
+  } else hls.forEach(h => h.classList.add("in"));
 })();
