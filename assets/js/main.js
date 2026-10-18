@@ -31,11 +31,6 @@
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(l => l.classList.toggle("active", l.hash === "#" + e.target.id)); }), { rootMargin: "-45% 0px -50% 0px" });
   $$("main section[id]").forEach(s => io.observe(s));
 
-  if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
-    const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); ro.unobserve(e.target); } }), { threshold: .12 });
-    $$(".reveal").forEach(e => ro.observe(e));
-  } else $$(".reveal").forEach(e => e.classList.add("in"));
-
   // Destaque animado do título: dispara uma única vez ao entrar na tela
   const hls = $$("[data-hl]");
   if ("IntersectionObserver" in window && hls.length) {
