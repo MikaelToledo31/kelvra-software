@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://SEU-DOMINIO.com.br/">
 <!-- Adicione assets/images/og-image.jpg (1200x630) e a meta og:image quando tiver a arte -->
 <script>(function(d){if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("js");setTimeout(function(){window.__kelvraAnim||d.classList.remove("js")},4000)}})(document.documentElement)</script>
+<link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -46,10 +47,17 @@
  </div>
 </div></section>
 
-<section id="projetos"><div class="wrap">
- <div class="head"><div data-animate><h2>Projetos</h2><p class="muted">Cada site é um novo desafio, e é com esse cuidado que entregamos resultados reais para nossos clientes.</p></div></div>
- <div id="projectList" class="grid" data-animate data-delay=".2"></div>
-</div></section>
+<section id="projetos">
+ <div class="wrap"><div class="head">
+  <div data-animate><h2>Projetos</h2><p class="muted">Cada site é um novo desafio, e é com esse cuidado que entregamos resultados reais para nossos clientes.</p></div>
+  <div class="car-nav" data-animate data-delay=".2">
+   <button type="button" class="car-btn" id="projPrev" aria-label="Projeto anterior"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+   <button type="button" class="car-btn" id="projNext" aria-label="Próximo projeto"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+  </div></div></div>
+ <div class="proj-carousel" data-animate="self" data-delay=".2">
+  <div class="swiper" id="projSwiper" aria-label="Carrossel de projetos"><div id="projectList" class="swiper-wrapper"></div><div class="swiper-pagination"></div></div>
+ </div>
+</section>
 
 <section id="sobre" class="about"><div class="wrap">
  <div class="photo" data-animate="self"><span>Foto do fundador<br><small>(substituir em assets/images)</small></span></div>
@@ -77,5 +85,5 @@
   <a class="btn btn-p" data-wa href="#contato"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.6-4.7A8.5 8.5 0 1 1 8 19.5L3 21z"/></svg> Fale conosco</a></div>
  <p class="copy" data-animate="self" data-distance="24" data-delay=".25">© <span id="year"></span> Kelvra Software. Todos os direitos reservados.</p>
 </div></footer>
-<script src="assets/js/config.js"></script><script src="assets/js/main.js"></script><script src="assets/js/animate.js"></script>
+<script src="assets/js/config.js"></script><script src="assets/js/main.js"></script><script src="assets/vendor/swiper/swiper-bundle.min.js"></script><script src="assets/js/carousel.js"></script><script src="assets/js/animate.js"></script>
 </body></html>

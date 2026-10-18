@@ -17,3 +17,7 @@ WhatsApp (formato `5516999999999`), Instagram, nome do fundador, projetos e depo
 (ou `data-animate="self"` para animar o próprio elemento). Opções: `data-distance` (px) e `data-delay` (s).
 Parâmetros globais (distância 100px, duração 0,8s, intervalo 0,08s, gatilho 10%) ficam no objeto `CFG` do arquivo.
 Respeita `prefers-reduced-motion` e não esconde conteúdo se o JS falhar.
+## Carrossel de projetos
+Biblioteca: **Swiper 11 (MIT)**, incluída localmente em `assets/vendor/swiper/` (sem CDN, funciona no GitHub Pages).
+Slides gerados a partir de `projects` em `assets/js/config.js` (campo `image` = captura do site; `url` vazia = sem link).
+Parâmetros do Coverflow e breakpoints em `assets/js/carousel.js`. O loop infinito é ativado com 6 ou mais projetos.

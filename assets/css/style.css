@@ -36,7 +36,6 @@ nav a:not(.btn):hover,nav a.active{color:var(--tx);border-color:var(--or)}
 .card:hover{border-color:rgba(255,107,44,.5);transform:translateY(-3px)}
 .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1.5rem;margin-bottom:2.5rem}
 .head p{max-width:30rem;margin-top:.8rem}
-#projectList{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
 .thumb{aspect-ratio:16/10;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--bg));display:grid;place-items:center;color:var(--tx2);font-size:.85rem;margin-bottom:1rem;overflow:hidden}
 .thumb img{width:100%;height:100%;object-fit:cover}
 .tag{color:var(--or);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}.link{color:var(--or);font-weight:600}
@@ -74,6 +73,25 @@ footer.site{overflow:clip}
 .hl::before{content:"";position:absolute;inset:.06em 0 .02em;background:var(--or);border-radius:.2em;z-index:-1;transform:scaleX(0);transform-origin:var(--o);transition:transform .7s cubic-bezier(.22,1,.36,1) var(--d)}
 .hl.in{color:var(--bg)}.hl.in::before{transform:scaleX(1)}
 @media(prefers-reduced-motion:reduce){.hl{color:var(--bg)}.hl::before{transform:scaleX(1)}}
+/* Carrossel de projetos (Swiper, efeito Coverflow) */
+.proj-carousel{max-width:1320px;margin:0 auto}
+#projSwiper{--swiper-theme-color:var(--or);padding:.5rem 0 3rem;overflow:hidden}
+#projSwiper .swiper-slide{display:flex;height:auto}
+#projSwiper .project{transition:filter .5s ease,border-color .5s ease}
+#projSwiper .swiper-slide:not(.swiper-slide-active) .project{filter:brightness(.55)}
+#projSwiper .project{width:100%;display:flex;flex-direction:column;gap:.15rem;padding:1.1rem}
+#projSwiper .project:hover{transform:none}
+#projSwiper .swiper-slide-active .project{border-color:rgba(255,107,44,.45)}
+#projSwiper .project .thumb{margin-bottom:.9rem}
+#projSwiper .project .link,#projSwiper .project>.small{margin-top:auto;padding-top:.6rem}
+#projSwiper .project .link{display:inline-block}
+#projSwiper .swiper-pagination{bottom:.4rem}
+#projSwiper .swiper-pagination-bullet{width:8px;height:8px;border-radius:999px;background:var(--tx2);opacity:.45;transition:width .3s,opacity .3s,background .3s}
+#projSwiper .swiper-pagination-bullet-active{width:22px;background:var(--or);opacity:1}
+.car-nav{display:flex;gap:.6rem}
+.car-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--bd);background:transparent;color:var(--tx);display:grid;place-items:center;cursor:pointer;transition:.25s}
+.car-btn:hover{border-color:var(--or);color:var(--or)}
+.car-btn.swiper-button-disabled{opacity:.35;pointer-events:none}
 @media(max-width:900px){#whyList{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){#porque .card{padding:1.1rem}}
 @media(max-width:360px){#whyList{grid-template-columns:1fr}}

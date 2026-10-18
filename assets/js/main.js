@@ -9,11 +9,11 @@
 
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   $("#projectList").innerHTML = C.projects.map(p => `
-    <article class="card project">
+    <div class="swiper-slide"><article class="card project">
       <div class="thumb">${p.image ? `<img src="${esc(p.image)}" alt="Prévia do projeto ${esc(p.name)}" loading="lazy">` : `<span>Imagem do projeto</span>`}</div>
       <p class="tag">${esc(p.category)}</p><h3>${esc(p.name)}</h3><p class="muted">${esc(p.description)}</p>
       ${p.url ? `<a class="link" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">Ver projeto →</a>` : `<span class="muted small">Demonstração</span>`}
-    </article>`).join("");
+    </article></div>`).join("");
 
   $("#testimonialList").innerHTML = C.testimonials.length
     ? C.testimonials.map(x => `<blockquote class="card"><p>“${esc(x.text)}”</p><footer>${esc(x.name)} · <span class="muted">${esc(x.role)}</span></footer></blockquote>`).join("")
