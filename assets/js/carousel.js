@@ -6,7 +6,7 @@
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const loop = count >= 6; // loop infinito só quando há projetos suficientes para o efeito não repetir cards
   window.kelvraProjetos = new Swiper(el, {
-    effect: "coverflow", grabCursor: true, centeredSlides: true, slideToClickedSlide: true,
+    effect: "coverflow", touchEventsTarget: "container", grabCursor: true, centeredSlides: true, slideToClickedSlide: true,
     loop, initialSlide: loop ? 0 : Math.floor((count - 1) / 2), speed: reduce ? 0 : 600,
     keyboard: { enabled: true, onlyInViewport: true },
     // Referência: rotate 0 · stretch 0 · depth 100 · modifier 2.5 · slidesPerView 2.43 · spaceBetween 40 — adaptados por breakpoint

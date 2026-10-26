@@ -21,3 +21,7 @@ Respeita `prefers-reduced-motion` e não esconde conteúdo se o JS falhar.
 Biblioteca: **Swiper 11 (MIT)**, incluída localmente em `assets/vendor/swiper/` (sem CDN, funciona no GitHub Pages).
 Slides gerados a partir de `projects` em `assets/js/config.js` (campo `image` = captura do site; `url` vazia = sem link).
 Parâmetros do Coverflow e breakpoints em `assets/js/carousel.js`. O loop infinito é ativado com 6 ou mais projetos.
+## Projeto Rede Prime (Projeto 2)
+Cadastrado em `assets/js/config.js` (2ª posição de `projects`). **Pendente:** salvar a captura de tela real de https://redeprimes.com.br/
+(sugestão: 1200×750 px, JPG/WebP otimizado, ~100–200 KB) em `assets/images/projeto-rede-prime.jpg` e preencher o campo `image`.
+Enquanto estiver vazio, o card exibe o texto de `placeholder` no lugar da prévia.
