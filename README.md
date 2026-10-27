@@ -29,5 +29,6 @@ A captura original, sem alterações, está em `assets/images/originals/rede-pri
 `assets/images/kelvra-logo.png` (296×407, PNG transparente, arte branca) é usada no header e no footer (`index.html`, classe `.logo`; tamanhos em `assets/css/style.css`).
 É a logo enviada, apenas sem as margens transparentes; a original intacta está em `assets/images/originals/kelvra-logo-original.png`.
 ## Favicon
-Símbolo "K" branco sobre #05080D, gerado da logo oficial. Arquivos: `favicon.ico` (16/32/48, na raiz) e `assets/images/icons/` (`favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`).
-As tags estão no `<head>` do `index.html` com `?v=2` (cache). Para trocar o ícone no futuro, substitua os arquivos e incremente o número `v`.
+Imagem oficial enviada: `assets/images/originals/kelvra-favicon-original.ico` ("K" branco, fundo transparente, 6 tamanhos de 16 a 256 px).
+`favicon.ico` (raiz) é essa mesma imagem; `favicon-16x16.png` e `favicon-32x32.png` são os quadros do próprio .ico, extraídos sem recodificar; `apple-touch-icon.png` (180×180) é o quadro de 256 px reduzido.
+Tags no `<head>` do `index.html` com `?v=3` (cache). Ao trocar o ícone de novo, substitua os arquivos e incremente o `v`.
