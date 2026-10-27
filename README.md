@@ -25,3 +25,6 @@ Parâmetros do Coverflow e breakpoints em `assets/js/carousel.js`. O loop infini
 Cadastrado em `assets/js/config.js` (2ª posição de `projects`).
 Prévia: `assets/images/rede-prime-preview.webp` (808×505, recorte 16:10 do topo da captura real enviada).
 A captura original, sem alterações, está em `assets/images/originals/rede-prime-original.png`.
+## Logo
+`assets/images/kelvra-logo.png` (296×407, PNG transparente, arte branca) é usada no header e no footer (`index.html`, classe `.logo`; tamanhos em `assets/css/style.css`).
+É a logo enviada, apenas sem as margens transparentes; a original intacta está em `assets/images/originals/kelvra-logo-original.png`.
