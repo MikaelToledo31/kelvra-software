@@ -15,7 +15,14 @@ window.KELVRA = {
       url: "https://redeprimes.com.br/",
       image: "assets/images/rede-prime-preview.webp", // recorte 16:10 do topo da home (original em assets/images/originals/)
     },
-    { name: "Projeto demonstração 3", category: "Site institucional", description: "Placeholder editável.", url: "", image: "" }
+    { name: "Projeto demonstração 3", category: "Site institucional", description: "Placeholder editável.", url: "", image: "" },
+    {
+      name: "Raquiel Studio Fitness",
+      category: "Website institucional",
+      description: "Desenvolvimento de site para apresentar a marca, seus serviços e sua presença no segmento fitness.",
+      url: "https://raquielstudiofitness.com.br/",
+      image: "assets/images/raquiel-studio-fitness-preview.webp" // recorte 16:10 da captura enviada (original em assets/images/originals/)
+    }
   ],
   // Adicione apenas depoimentos reais e autorizados: { text, name, role }
   testimonials: []

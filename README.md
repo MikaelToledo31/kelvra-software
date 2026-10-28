@@ -32,3 +32,5 @@ A captura original, sem alterações, está em `assets/images/originals/rede-pri
 Imagem oficial enviada: `assets/images/originals/kelvra-favicon-original.ico` ("K" branco, fundo transparente, 6 tamanhos de 16 a 256 px).
 `favicon.ico` (raiz) é essa mesma imagem; `favicon-16x16.png` e `favicon-32x32.png` são os quadros do próprio .ico, extraídos sem recodificar; `apple-touch-icon.png` (180×180) é o quadro de 256 px reduzido.
 Tags no `<head>` do `index.html` com `?v=3` (cache). Ao trocar o ícone de novo, substitua os arquivos e incremente o `v`.
+## Projeto Raquiel Studio Fitness
+Cadastrado em `assets/js/config.js` (4ª posição). Prévia: `assets/images/raquiel-studio-fitness-preview.webp` (1200×750, recorte central 16:10 da captura enviada; original sem alterações em `assets/images/originals/raquiel-studio-fitness-original.png`).
