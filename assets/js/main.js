@@ -9,10 +9,10 @@
 
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   $("#projectList").innerHTML = C.projects.map(p => `
-    <div class="swiper-slide"><article class="card project">
-      <div class="thumb">${p.image ? `<img src="${esc(p.image)}" alt="Prévia do projeto ${esc(p.name)}" loading="lazy">` : `<span>${esc(p.placeholder || "Imagem do projeto")}</span>`}</div>
+    <div class="swiper-slide"><article class="card project${p.soon ? " soon" : ""}">
+      ${p.soon ? `<div class="thumb thumb-soon" aria-hidden="true"><span class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span></div>` : `<div class="thumb">${p.image ? `<img src="${esc(p.image)}" alt="Prévia do projeto ${esc(p.name)}" loading="lazy">` : `<span>${esc(p.placeholder || "Imagem do projeto")}</span>`}</div>`}
       <p class="tag">${esc(p.category)}</p><h3>${esc(p.name)}</h3><p class="muted">${esc(p.description)}</p>
-      ${p.url ? `<a class="link" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto ${esc(p.name)} (abre em nova aba)">Ver projeto →</a>` : `<span class="muted small">Demonstração</span>`}
+      ${p.url ? `<a class="link" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto ${esc(p.name)} (abre em nova aba)">Ver projeto →</a>` : (p.soon ? "" : `<span class="muted small">Demonstração</span>`)}
     </article></div>`).join("");
 
   $("#testimonialList").innerHTML = C.testimonials.length

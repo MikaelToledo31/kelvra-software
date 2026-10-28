@@ -89,6 +89,10 @@ footer.site{overflow:clip}
 #projSwiper .project:hover{transform:none}
 #projSwiper .swiper-slide-active .project{border-color:rgba(255,107,44,.45)}
 #projSwiper .project .thumb{margin-bottom:.9rem}
+/* card informativo "Novos projetos em breve": mesma dimensão, borda tracejada e ícone no lugar da imagem */
+#projSwiper .project.soon{border-style:dashed}
+#projSwiper .project.soon .thumb{background:linear-gradient(135deg,rgba(31,58,95,.4),var(--bg2));border:1px dashed var(--bd)}
+.thumb-soon .ico{width:72px;height:72px;margin:0}.thumb-soon .ico .ic{width:30px;height:30px}
 #projSwiper .project .link,#projSwiper .project>.small{margin-top:auto;padding-top:.6rem}
 #projSwiper .project .link{align-self:flex-start}
 #projSwiper .swiper-pagination{bottom:.4rem}

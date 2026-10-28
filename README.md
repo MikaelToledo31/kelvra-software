@@ -19,12 +19,12 @@ Parâmetros globais (distância 100px, duração 0,8s, intervalo 0,08s, gatilho 
 Respeita `prefers-reduced-motion` e não esconde conteúdo se o JS falhar.
 ## Carrossel de projetos
 Biblioteca: **Swiper 11 (MIT)**, incluída localmente em `assets/vendor/swiper/` (sem CDN, funciona no GitHub Pages).
-Slides gerados a partir de `projects` em `assets/js/config.js` (campo `image` = captura do site; `url` vazia = sem link).
-Parâmetros do Coverflow e breakpoints em `assets/js/carousel.js`. O loop infinito é ativado com 6 ou mais projetos.
+Slides gerados a partir de `projects` em `assets/js/config.js` (campo `image` = captura do site; `url` vazia = sem link; `soon: true` = card informativo "em breve", sem imagem nem botão).
+Parâmetros do Coverflow e breakpoints em `assets/js/carousel.js`. O loop infinito é ativado com 6 ou mais projetos. Ordem atual: Raquiel Studio Fitness, Rede Prime, Novos projetos em breve.
 ## Projeto Rede Prime (Projeto 2)
 Cadastrado em `assets/js/config.js` (2ª posição de `projects`).
-Prévia: `assets/images/rede-prime-preview.webp` (808×505, recorte 16:10 do topo da captura real enviada).
-A captura original, sem alterações, está em `assets/images/originals/rede-prime-original.png`.
+Prévia: `assets/images/rede-prime-home.webp` (1200×750, recorte 16:10 da captura atual da home).
+A captura original, sem alterações, está em `assets/images/originals/rede-prime-original.png` (a anterior ficou em `rede-prime-original-anterior.png`).
 ## Logo
 `assets/images/kelvra-logo.png` (296×407, PNG transparente, arte branca) é usada no header e no footer (`index.html`, classe `.logo`; tamanhos em `assets/css/style.css`).
 É a logo enviada, apenas sem as margens transparentes; a original intacta está em `assets/images/originals/kelvra-logo-original.png`.
