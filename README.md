@@ -34,3 +34,9 @@ Imagem oficial enviada: `assets/images/originals/kelvra-favicon-original.ico` ("
 Tags no `<head>` do `index.html` com `?v=3` (cache). Ao trocar o ícone de novo, substitua os arquivos e incremente o `v`.
 ## Projeto Raquiel Studio Fitness
 Cadastrado em `assets/js/config.js` (4ª posição). Prévia: `assets/images/raquiel-studio-fitness-preview.webp` (1200×750, recorte central 16:10 da captura enviada; original sem alterações em `assets/images/originals/raquiel-studio-fitness-original.png`).
+## Hero em tela cheia com gradiente animado (Prism)
+`assets/js/hero-gradient.js` é um port em JS puro do `AnimatedGradient` do Spell UI, que usa o shader **Warp do Paper Design** (WebGL2).
+O shader está em `assets/vendor/paper-shaders/` (bundle único, **Apache-2.0**; LICENSE e NOTICE incluídos).
+O preset `Prism` (cores da marca, parâmetros em `PRESETS`) é escolhido em `data-preset` no `<div class="hero-gradient">` do `index.html`.
+O Hero usa `min-height: 100svh` (com `100vh` de reserva) e o cabeçalho o sobrepõe. Sem WebGL, ou antes do carregamento, aparece o fundo CSS de reserva.
+Com `prefers-reduced-motion` o gradiente fica estático; a animação pausa sozinha quando o Hero sai da tela.
