@@ -40,3 +40,8 @@ O shader está em `assets/vendor/paper-shaders/` (bundle único, **Apache-2.0**;
 O preset `Prism` (cores da marca, parâmetros em `PRESETS`) é escolhido em `data-preset` no `<div class="hero-gradient">` do `index.html`.
 O Hero usa `min-height: 100svh` (com `100vh` de reserva) e o cabeçalho o sobrepõe. Sem WebGL, ou antes do carregamento, aparece o fundo CSS de reserva.
 Com `prefers-reduced-motion` o gradiente fica estático; a animação pausa sozinha quando o Hero sai da tela.
+## Seção "Por que ter um site?"
+Tela cheia (`min-height: 100svh`; cresce em telas pequenas). 4 cards: 4 colunas (≥1024px), 2 colunas (≥520px), 1 coluna abaixo disso; todos com a mesma altura.
+Efeito de hover (cantos 50px + `scale(1.05)`) só em dispositivos com mouse; o conteúdo nunca depende do hover.
+`assets/js/blur-reveal.js`: BlurReveal em JS puro (palavra por palavra, desfocado → nítido). Marque o grupo com `data-blur-group` e os textos com `data-blur`.
+Sem animação com `prefers-reduced-motion`.
